@@ -215,7 +215,7 @@ non-reproducible in the Data Explorer.
 
 ## 13. Time spent and remaining improvements
 
-Elapsed working time for the build was approximately **3 hours** of an
+Elapsed working time for the build was approximately **2.5 hours** of an
 AI-assisted session (inspection → extracts → profiling → pipeline → dbt →
 analyses → evidence → docs), plus human review time on top. With more time:
 weighted versions of q1–q6 behind a dbt macro, a drift test comparing seeds
