@@ -1,0 +1,60 @@
+╭─ Summary ───────────╮
+│ Total Time: 0.0118s │
+╰─────────────────────╯
+╭─ Order By ───────────────────────────────────╮
+│ Order By: religion_raised_in ASC, #4 DESC,   │
+│           #5 ASC                             │
+│ 85 rows                                  0µs │
+╰───────────────────────┬──────────────────────╯
+╭─ Projection ──────────┴──────────────────────╮
+│ Projections:                                 │
+│ #0, #1, #2, #3, #4,                          │
+│ __internal_compress_string_uinteger(#5)      │
+│ 85 rows                                  0µs │
+╰───────────────────────┬──────────────────────╯
+╭─ Projection ──────────┴──────────────────────╮
+│ Projections: religion_raised_in,             │
+│              prayer_frequency, respondents,  │
+│              pct_within_religion,            │
+│              is_genuine_answer, prayer_code  │
+│ 85 rows                                  0µs │
+╰───────────────────────┬──────────────────────╯
+╭─ Hash Join ───────────┴──────────────────────╮
+│ Join Type: INNER                             │
+│ Conditions:                                  │
+│ religion_raised_in IS NOT DISTINCT FROM #0   │
+│ 85 rows                               10.0ms │
+╰───────────────────────┬──────────────────────╯
+                        ├───────────────────────────────────────────────────────────────╮
+╭─ Hash Group By ───────┴──────────────────────╮  ╭─ Hash Group By ─────────────────────┴────────────────────────────────────╮
+│ Groups: #0, #1, #2                           │  │ Groups: #0                                                               │
+│ Aggregates: min(#3), count_star()            │  │ Aggregates: sum(#1)                                                      │
+│ 85 rows                                  0µs │  │ 13 rows                                                           10.0ms │
+╰───────────────────────┒┎─────────────────────╯  ╰─────────────────────────────────────┬────────────────────────────────────╯
+╭─ Projection ──────────┚┖─────────────────────╮  ╭─ Projection ────────────────────────┴────────────────────────────────────╮
+│ Projections: religion_raised_in,             │  │ Projections:                                                             │
+│              prayer_frequency,               │  │ religion_raised_in,                                                      │
+│              is_genuine_answer, pray_code    │  │ CASE  WHEN (is_genuine_answer) THEN (respondents) ELSE NULL::BIGINT END  │
+│ 7,753 rows                               0µs │  │ 85 rows                                                              0µs │
+╰───────────────────────┒┎─────────────────────╯  ╰─────────────────────────────────────┬────────────────────────────────────╯
+╭─ Table Scan ──────────┚┖─────────────────────╮  ╭─ Projection ────────────────────────┴────────────────────────────────────╮
+│ Table: gss.main_marts.mart_respondent_survey │  │ Projections: 0, 3, respondents                                           │
+│ Type: Sequential Scan                        │  │ 85 rows                                                              0µs │
+│ Projections: pray_code, pray_label,          │  ╰─────────────────────────────────────┬────────────────────────────────────╯
+│              pray_response_class,            │  ╭─ Hash Group By ─────────────────────┴────────────────────────────────────╮
+│              relig16_label,                  │  │ Groups: #0, #1, #2                                                       │
+│              relig16_response_class          │  │ Aggregates: count_star()                                                 │
+│ Row Groups Scanned: 1 / 1                    │  │ 85 rows                                                              0µs │
+│ 7,753 rows                               0µs │  ╰─────────────────────────────────────┒┎───────────────────────────────────╯
+╰──────────────────────────────────────────────╯  ╭─ Projection ────────────────────────┚┖───────────────────────────────────╮
+                                                  │ Projections: religion_raised_in, prayer_frequency, is_genuine_answer     │
+                                                  │ 7,753 rows                                                           0µs │
+                                                  ╰─────────────────────────────────────┒┎───────────────────────────────────╯
+                                                  ╭─ Table Scan ────────────────────────┚┖───────────────────────────────────╮
+                                                  │ Table: gss.main_marts.mart_respondent_survey                             │
+                                                  │ Type: Sequential Scan                                                    │
+                                                  │ Projections: pray_label, pray_response_class, relig16_label,             │
+                                                  │              relig16_response_class                                      │
+                                                  │ Row Groups Scanned: 1 / 1                                                │
+                                                  │ 7,753 rows                                                           0µs │
+                                                  ╰──────────────────────────────────────────────────────────────────────────╯

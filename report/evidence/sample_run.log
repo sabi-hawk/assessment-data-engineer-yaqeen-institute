@@ -1,0 +1,265 @@
+2026-11-02 21:45:35,445 INFO    pipeline - run ff9d9c00b6 starting; stages=['all'] force=False
+2026-11-02 21:45:35,445 INFO    pipeline - log file: C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\logs\run_20261102_164535_ff9d9c00b6.log
+2026-11-02 21:45:35,447 INFO    pipeline - created dbt/profiles.yml from profiles.yml.example
+2026-11-02 21:45:35,447 INFO    pipeline - stage check-env        OK      (0.00s) python 3.12.10, dbt found, 2 extracts present
+2026-11-02 21:45:35,468 INFO    pipeline.extract_loader - read gss_extract_1_2014_2016.json: 5405 records, sha256=afc01a008660
+2026-11-02 21:45:35,493 INFO    pipeline.validation - gss_extract_1_2014_2016: 5405 records valid, 0 quarantined
+2026-11-02 21:45:35,508 INFO    pipeline.extract_loader - read gss_extract_2_2016_2018.json: 5215 records, sha256=0373c044d6c2
+2026-11-02 21:45:35,529 INFO    pipeline.validation - gss_extract_2_2016_2018: 5215 records valid, 0 quarantined
+2026-11-02 21:45:35,529 INFO    pipeline - stage validate         OK      (0.08s) 10,620 records valid across 2 extracts, 0 quarantined
+2026-11-02 21:45:35,586 INFO    pipeline.profiling - data profile written to C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\docs\data_profile.md and C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\report\evidence\data_profile_missingness.csv
+2026-11-02 21:45:35,586 INFO    pipeline - stage profile          OK      (0.06s) profile written to data_profile.md; distinct observations 7,753, overlap 2,867
+2026-11-02 21:45:35,626 INFO    pipeline.database - database schema initialised at C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\source\data\processed\gss.duckdb
+2026-11-02 21:45:35,635 INFO    pipeline - stage init-db          OK      (0.05s) schema ready at C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\source\data\processed\gss.duckdb
+2026-11-02 21:45:43,717 INFO    pipeline.database - gss_extract_1_2014_2016 loaded: 5405 inserted (0 replaced), 0 overlap rows shared with other extracts
+2026-11-02 21:45:53,501 INFO    pipeline.database - gss_extract_2_2016_2018 loaded: 5215 inserted (0 replaced), 2867 overlap rows shared with other extracts
+2026-11-02 21:45:53,543 INFO    pipeline - stage ingest           OK      (17.91s) gss_extract_1_2014_2016: loaded (5405 inserted); gss_extract_2_2016_2018: loaded (5215 inserted)
+2026-11-02 21:45:53,545 INFO    pipeline - running: dbt seed
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:54  Running with dbt=1.12.6
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:55  Registered adapter: duckdb=1.11.1
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:55  Unable to do partial parsing because saved manifest not found. Starting full parse.
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:56  [WARNING][MissingArgumentsPropertyInGenericTestDeprecation]: Deprecated
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | functionality
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | Found top-level arguments to test `accepted_values` defined on
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 'int_gss__responses_classified' in package 'gss_pipeline'
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | (models\intermediate\_int_gss__models.yml). Arguments to generic tests should be
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | nested under the `arguments` property.
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  Found 4 models, 7 analyses, 56 data tests, 3 seeds, 2 sources, 511 macros
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  Concurrency: 4 threads (target='dev')
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  1 of 3 START seed file main_metadata.response_code_metadata .................... [RUN]
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  2 of 3 START seed file main_metadata.variable_ballot_availability .............. [RUN]
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  3 of 3 START seed file main_metadata.variable_metadata ......................... [RUN]
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  3 of 3 OK loaded seed file main_metadata.variable_metadata ..................... [INSERT 19 in 0.15s]
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  1 of 3 OK loaded seed file main_metadata.response_code_metadata ................ [INSERT 386 in 0.16s]
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  2 of 3 OK loaded seed file main_metadata.variable_ballot_availability .......... [INSERT 171 in 0.16s]
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  Finished running 3 seeds in 0 hours 0 minutes and 0.40 seconds (0.40s).
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  Completed successfully
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  Done. PASS=3 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=3
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | 16:45:57  [WARNING][DeprecationsSummary]: Deprecated functionality
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | Summary of encountered deprecations:
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | - MissingArgumentsPropertyInGenericTestDeprecation: 16 occurrences
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | To see all deprecation instances instead of just the first occurrence of each,
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | run command again with the `--show-all-deprecations` flag. You may also need to
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | run with `--no-partial-parse` as some deprecations are only encountered during
+2026-11-02 21:45:59,899 INFO    pipeline - dbt | parsing.
+2026-11-02 21:45:59,899 INFO    pipeline - stage dbt-seed         OK      (6.36s) dbt seed succeeded
+2026-11-02 21:45:59,900 INFO    pipeline - running: dbt test --select source:*
+2026-11-02 21:46:05,942 INFO    pipeline - dbt | 16:46:01  Running with dbt=1.12.6
+2026-11-02 21:46:05,942 INFO    pipeline - dbt | 16:46:01  Registered adapter: duckdb=1.11.1
+2026-11-02 21:46:05,942 INFO    pipeline - dbt | 16:46:02  Found 4 models, 7 analyses, 56 data tests, 3 seeds, 2 sources, 511 macros
+2026-11-02 21:46:05,942 INFO    pipeline - dbt | 16:46:02  
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  Concurrency: 4 threads (target='dev')
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  1 of 13 START test assert_raw_overlap_consistent ............................... [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  2 of 13 START test source_accepted_values_gss_raw_extract_records_ballot__1__2__3  [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  3 of 13 START test source_accepted_values_gss_raw_extract_records_extract_name__gss_extract_1_2014_2016__gss_extract_2_2016_2018  [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  4 of 13 START test source_accepted_values_gss_raw_extract_records_year__False__2014__2016__2018  [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  2 of 13 PASS source_accepted_values_gss_raw_extract_records_ballot__1__2__3 .... [PASS in 0.13s]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  4 of 13 PASS source_accepted_values_gss_raw_extract_records_year__False__2014__2016__2018  [PASS in 0.13s]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  3 of 13 PASS source_accepted_values_gss_raw_extract_records_extract_name__gss_extract_1_2014_2016__gss_extract_2_2016_2018  [PASS in 0.13s]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  5 of 13 START test source_accepted_values_gss_raw_load_audit_status__loaded__skipped_unchanged__failed  [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  6 of 13 START test source_not_null_gss_raw_extract_records_ballot .............. [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  7 of 13 START test source_not_null_gss_raw_extract_records_extract_name ........ [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  1 of 13 PASS assert_raw_overlap_consistent ..................................... [PASS in 0.17s]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  8 of 13 START test source_not_null_gss_raw_extract_records_id .................. [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  6 of 13 PASS source_not_null_gss_raw_extract_records_ballot .................... [PASS in 0.07s]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  9 of 13 START test source_not_null_gss_raw_extract_records_wtssps .............. [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  5 of 13 PASS source_accepted_values_gss_raw_load_audit_status__loaded__skipped_unchanged__failed  [PASS in 0.08s]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  10 of 13 START test source_not_null_gss_raw_extract_records_year ............... [RUN]
+2026-11-02 21:46:05,943 INFO    pipeline - dbt | 16:46:02  8 of 13 PASS source_not_null_gss_raw_extract_records_id ........................ [PASS in 0.05s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  7 of 13 PASS source_not_null_gss_raw_extract_records_extract_name .............. [PASS in 0.08s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  11 of 13 START test source_not_null_gss_raw_load_audit_extract_name ............ [RUN]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  12 of 13 START test source_not_null_gss_raw_load_audit_run_id .................. [RUN]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  9 of 13 PASS source_not_null_gss_raw_extract_records_wtssps .................... [PASS in 0.06s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  13 of 13 START test source_not_null_gss_raw_load_audit_status .................. [RUN]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  10 of 13 PASS source_not_null_gss_raw_extract_records_year ..................... [PASS in 0.05s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  12 of 13 PASS source_not_null_gss_raw_load_audit_run_id ........................ [PASS in 0.05s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  11 of 13 PASS source_not_null_gss_raw_load_audit_extract_name .................. [PASS in 0.06s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  13 of 13 PASS source_not_null_gss_raw_load_audit_status ........................ [PASS in 0.02s]
+2026-11-02 21:46:05,944 INFO    pipeline - dbt | 16:46:02  
+2026-11-02 21:46:05,945 INFO    pipeline - dbt | 16:46:02  Finished running 13 data tests in 0 hours 0 minutes and 0.43 seconds (0.43s).
+2026-11-02 21:46:05,945 INFO    pipeline - dbt | 16:46:02  
+2026-11-02 21:46:05,945 INFO    pipeline - dbt | 16:46:02  Completed successfully
+2026-11-02 21:46:05,945 INFO    pipeline - dbt | 16:46:02  
+2026-11-02 21:46:05,945 INFO    pipeline - dbt | 16:46:02  Done. PASS=13 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=13
+2026-11-02 21:46:05,945 INFO    pipeline - stage dbt-source-test  OK      (6.04s) dbt test --select source:* succeeded
+2026-11-02 21:46:05,947 INFO    pipeline - running: dbt run
+2026-11-02 21:46:12,028 INFO    pipeline - dbt | 16:46:07  Running with dbt=1.12.6
+2026-11-02 21:46:12,028 INFO    pipeline - dbt | 16:46:07  Registered adapter: duckdb=1.11.1
+2026-11-02 21:46:12,028 INFO    pipeline - dbt | 16:46:08  Found 4 models, 7 analyses, 56 data tests, 3 seeds, 2 sources, 511 macros
+2026-11-02 21:46:12,028 INFO    pipeline - dbt | 16:46:08  
+2026-11-02 21:46:12,028 INFO    pipeline - dbt | 16:46:08  Concurrency: 4 threads (target='dev')
+2026-11-02 21:46:12,028 INFO    pipeline - dbt | 16:46:08  
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  1 of 4 START sql view model main_staging.stg_gss__respondents .................. [RUN]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  1 of 4 OK created sql view model main_staging.stg_gss__respondents ............. [OK in 0.06s]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  2 of 4 START sql view model main_intermediate.int_gss__responses_long .......... [RUN]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  2 of 4 OK created sql view model main_intermediate.int_gss__responses_long ..... [OK in 0.04s]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  3 of 4 START sql view model main_intermediate.int_gss__responses_classified .... [RUN]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  3 of 4 OK created sql view model main_intermediate.int_gss__responses_classified  [OK in 0.03s]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:08  4 of 4 START sql table model main_marts.mart_respondent_survey ................. [RUN]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  4 of 4 OK created sql table model main_marts.mart_respondent_survey ............ [OK in 1.50s]
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  Finished running 1 table model, 3 view models in 0 hours 0 minutes and 1.79 seconds (1.79s).
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  Completed successfully
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  
+2026-11-02 21:46:12,029 INFO    pipeline - dbt | 16:46:10  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=4
+2026-11-02 21:46:12,029 INFO    pipeline - stage dbt-run          OK      (6.08s) dbt run succeeded
+2026-11-02 21:46:12,031 INFO    pipeline - running: dbt test
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:13  Running with dbt=1.12.6
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:13  Registered adapter: duckdb=1.11.1
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  Found 4 models, 7 analyses, 56 data tests, 3 seeds, 2 sources, 511 macros
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  Concurrency: 4 threads (target='dev')
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  1 of 56 START test accepted_values_int_gss__responses_classified_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing__skipped_on_web__refused__other_missing  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  2 of 56 START test accepted_values_mart_respondent_survey_news_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  3 of 56 START test accepted_values_mart_respondent_survey_postlife_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  4 of 56 START test accepted_values_mart_respondent_survey_pray_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  3 of 56 PASS accepted_values_mart_respondent_survey_postlife_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [PASS in 0.09s]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  4 of 56 PASS accepted_values_mart_respondent_survey_pray_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [PASS in 0.09s]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  2 of 56 PASS accepted_values_mart_respondent_survey_news_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [PASS in 0.09s]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  5 of 56 START test accepted_values_mart_respondent_survey_survey_year__False__2014__2016__2018  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  6 of 56 START test accepted_values_mart_respondent_survey_tvhours_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  7 of 56 START test accepted_values_response_code_metadata_response_class__valid__dont_know__no_answer__not_applicable__skipped_on_web__refused__other_missing  [RUN]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  5 of 56 PASS accepted_values_mart_respondent_survey_survey_year__False__2014__2016__2018  [PASS in 0.05s]
+2026-11-02 21:46:17,563 INFO    pipeline - dbt | 16:46:14  8 of 56 START test accepted_values_stg_gss__respondents_ballot__False__1__2__3 . [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  7 of 56 PASS accepted_values_response_code_metadata_response_class__valid__dont_know__no_answer__not_applicable__skipped_on_web__refused__other_missing  [PASS in 0.06s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  9 of 56 START test accepted_values_stg_gss__respondents_survey_year__False__2014__2016__2018  [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  6 of 56 PASS accepted_values_mart_respondent_survey_tvhours_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing  [PASS in 0.07s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  10 of 56 START test accepted_values_variable_metadata_value_type__categorical__numeric  [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  1 of 56 PASS accepted_values_int_gss__responses_classified_response_class__valid__dont_know__no_answer__not_applicable__not_asked_ballot__not_asked_in_year__system_missing__skipped_on_web__refused__other_missing  [PASS in 0.21s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  11 of 56 START test assert_extract_constraints ................................. [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  8 of 56 PASS accepted_values_stg_gss__respondents_ballot__False__1__2__3 ....... [PASS in 0.07s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  12 of 56 START test assert_mart_counts_match_staging ........................... [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  9 of 56 PASS accepted_values_stg_gss__respondents_survey_year__False__2014__2016__2018  [PASS in 0.06s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  10 of 56 PASS accepted_values_variable_metadata_value_type__categorical__numeric  [PASS in 0.04s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  13 of 56 START test assert_no_unknown_response_codes ........................... [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  14 of 56 START test assert_raw_overlap_consistent .............................. [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  11 of 56 PASS assert_extract_constraints ....................................... [PASS in 0.04s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  15 of 56 START test assert_sample_weights_positive ............................. [RUN]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  12 of 56 PASS assert_mart_counts_match_staging ................................. [PASS in 0.03s]
+2026-11-02 21:46:17,564 INFO    pipeline - dbt | 16:46:14  16 of 56 START test assert_seed_response_codes_unique .......................... [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  14 of 56 PASS assert_raw_overlap_consistent .................................... [PASS in 0.05s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  17 of 56 START test not_null_int_gss__responses_classified_response_class ...... [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  15 of 56 PASS assert_sample_weights_positive ................................... [PASS in 0.04s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  18 of 56 START test not_null_int_gss__responses_long_respondent_key ............ [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  16 of 56 PASS assert_seed_response_codes_unique ................................ [PASS in 0.05s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  19 of 56 START test not_null_int_gss__responses_long_variable_name ............. [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  13 of 56 PASS assert_no_unknown_response_codes ................................. [PASS in 0.14s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  20 of 56 START test not_null_mart_respondent_survey_respondent_id .............. [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  20 of 56 PASS not_null_mart_respondent_survey_respondent_id .................... [PASS in 0.02s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  21 of 56 START test not_null_mart_respondent_survey_respondent_key ............. [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  19 of 56 PASS not_null_int_gss__responses_long_variable_name ................... [PASS in 0.11s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  22 of 56 START test not_null_mart_respondent_survey_sample_weight .............. [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  18 of 56 PASS not_null_int_gss__responses_long_respondent_key .................. [PASS in 0.14s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  23 of 56 START test not_null_mart_respondent_survey_survey_year ................ [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  17 of 56 PASS not_null_int_gss__responses_classified_response_class ............ [PASS in 0.17s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  24 of 56 START test not_null_response_code_metadata_code ....................... [RUN]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  21 of 56 PASS not_null_mart_respondent_survey_respondent_key ................... [PASS in 0.07s]
+2026-11-02 21:46:17,565 INFO    pipeline - dbt | 16:46:14  25 of 56 START test not_null_response_code_metadata_is_genuine_response ........ [RUN]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  22 of 56 PASS not_null_mart_respondent_survey_sample_weight .................... [PASS in 0.06s]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  26 of 56 START test not_null_response_code_metadata_response_class ............. [RUN]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  23 of 56 PASS not_null_mart_respondent_survey_survey_year ...................... [PASS in 0.07s]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  27 of 56 START test not_null_response_code_metadata_variable_name .............. [RUN]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  24 of 56 PASS not_null_response_code_metadata_code ............................. [PASS in 0.07s]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  28 of 56 START test not_null_stg_gss__respondents_ballot ....................... [RUN]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  25 of 56 PASS not_null_response_code_metadata_is_genuine_response .............. [PASS in 0.07s]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  29 of 56 START test not_null_stg_gss__respondents_respondent_id ................ [RUN]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  26 of 56 PASS not_null_response_code_metadata_response_class ................... [PASS in 0.09s]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  30 of 56 START test not_null_stg_gss__respondents_respondent_key ............... [RUN]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  27 of 56 PASS not_null_response_code_metadata_variable_name .................... [PASS in 0.09s]
+2026-11-02 21:46:17,566 INFO    pipeline - dbt | 16:46:14  28 of 56 PASS not_null_stg_gss__respondents_ballot ............................. [PASS in 0.07s]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  29 of 56 PASS not_null_stg_gss__respondents_respondent_id ...................... [PASS in 0.06s]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  31 of 56 START test not_null_stg_gss__respondents_sample_weight ................ [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  32 of 56 START test not_null_stg_gss__respondents_survey_year .................. [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  33 of 56 START test not_null_variable_ballot_availability_asked_on_ballot ...... [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  30 of 56 PASS not_null_stg_gss__respondents_respondent_key ..................... [PASS in 0.07s]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  34 of 56 START test not_null_variable_ballot_availability_ballot ............... [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  33 of 56 PASS not_null_variable_ballot_availability_asked_on_ballot ............ [PASS in 0.05s]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  35 of 56 START test not_null_variable_ballot_availability_variable_name ........ [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  31 of 56 PASS not_null_stg_gss__respondents_sample_weight ...................... [PASS in 0.06s]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  32 of 56 PASS not_null_stg_gss__respondents_survey_year ........................ [PASS in 0.06s]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  36 of 56 START test not_null_variable_ballot_availability_year ................. [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:14  37 of 56 START test not_null_variable_metadata_value_type ...................... [RUN]
+2026-11-02 21:46:17,567 INFO    pipeline - dbt | 16:46:15  34 of 56 PASS not_null_variable_ballot_availability_ballot ..................... [PASS in 0.06s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  38 of 56 START test not_null_variable_metadata_variable_name ................... [RUN]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  35 of 56 PASS not_null_variable_ballot_availability_variable_name .............. [PASS in 0.05s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  39 of 56 START test not_null_variable_metadata_years_available ................. [RUN]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  36 of 56 PASS not_null_variable_ballot_availability_year ....................... [PASS in 0.05s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  40 of 56 START test relationships_response_code_metadata_variable_name__variable_name__ref_variable_metadata_  [RUN]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  37 of 56 PASS not_null_variable_metadata_value_type ............................ [PASS in 0.05s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  41 of 56 START test relationships_variable_ballot_availability_variable_name__variable_name__ref_variable_metadata_  [RUN]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  38 of 56 PASS not_null_variable_metadata_variable_name ......................... [PASS in 0.09s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  39 of 56 PASS not_null_variable_metadata_years_available ....................... [PASS in 0.08s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  42 of 56 START test source_accepted_values_gss_raw_extract_records_ballot__1__2__3  [RUN]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  43 of 56 START test source_accepted_values_gss_raw_extract_records_extract_name__gss_extract_1_2014_2016__gss_extract_2_2016_2018  [RUN]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  40 of 56 PASS relationships_response_code_metadata_variable_name__variable_name__ref_variable_metadata_  [PASS in 0.12s]
+2026-11-02 21:46:17,568 INFO    pipeline - dbt | 16:46:15  41 of 56 PASS relationships_variable_ballot_availability_variable_name__variable_name__ref_variable_metadata_  [PASS in 0.09s]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  44 of 56 START test source_accepted_values_gss_raw_extract_records_year__False__2014__2016__2018  [RUN]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  45 of 56 START test source_accepted_values_gss_raw_load_audit_status__loaded__skipped_unchanged__failed  [RUN]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  43 of 56 PASS source_accepted_values_gss_raw_extract_records_extract_name__gss_extract_1_2014_2016__gss_extract_2_2016_2018  [PASS in 0.10s]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  42 of 56 PASS source_accepted_values_gss_raw_extract_records_ballot__1__2__3 ... [PASS in 0.11s]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  46 of 56 START test source_not_null_gss_raw_extract_records_ballot ............. [RUN]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  47 of 56 START test source_not_null_gss_raw_extract_records_extract_name ....... [RUN]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  44 of 56 PASS source_accepted_values_gss_raw_extract_records_year__False__2014__2016__2018  [PASS in 0.08s]
+2026-11-02 21:46:17,569 INFO    pipeline - dbt | 16:46:15  45 of 56 PASS source_accepted_values_gss_raw_load_audit_status__loaded__skipped_unchanged__failed  [PASS in 0.09s]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  48 of 56 START test source_not_null_gss_raw_extract_records_id ................. [RUN]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  49 of 56 START test source_not_null_gss_raw_extract_records_wtssps ............. [RUN]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  47 of 56 PASS source_not_null_gss_raw_extract_records_extract_name ............. [PASS in 0.08s]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  50 of 56 START test source_not_null_gss_raw_extract_records_year ............... [RUN]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  46 of 56 PASS source_not_null_gss_raw_extract_records_ballot ................... [PASS in 0.09s]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  51 of 56 START test source_not_null_gss_raw_load_audit_extract_name ............ [RUN]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  48 of 56 PASS source_not_null_gss_raw_extract_records_id ....................... [PASS in 0.08s]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  49 of 56 PASS source_not_null_gss_raw_extract_records_wtssps ................... [PASS in 0.09s]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  52 of 56 START test source_not_null_gss_raw_load_audit_run_id .................. [RUN]
+2026-11-02 21:46:17,570 INFO    pipeline - dbt | 16:46:15  53 of 56 START test source_not_null_gss_raw_load_audit_status .................. [RUN]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  50 of 56 PASS source_not_null_gss_raw_extract_records_year ..................... [PASS in 0.09s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  54 of 56 START test unique_mart_respondent_survey_respondent_key ............... [RUN]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  51 of 56 PASS source_not_null_gss_raw_load_audit_extract_name .................. [PASS in 0.08s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  55 of 56 START test unique_stg_gss__respondents_respondent_key ................. [RUN]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  52 of 56 PASS source_not_null_gss_raw_load_audit_run_id ........................ [PASS in 0.08s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  56 of 56 START test unique_variable_metadata_variable_name ..................... [RUN]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  53 of 56 PASS source_not_null_gss_raw_load_audit_status ........................ [PASS in 0.08s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  54 of 56 PASS unique_mart_respondent_survey_respondent_key ..................... [PASS in 0.08s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  56 of 56 PASS unique_variable_metadata_variable_name ........................... [PASS in 0.05s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  55 of 56 PASS unique_stg_gss__respondents_respondent_key ....................... [PASS in 0.07s]
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  Finished running 56 data tests in 0 hours 0 minutes and 1.35 seconds (1.35s).
+2026-11-02 21:46:17,571 INFO    pipeline - dbt | 16:46:15  
+2026-11-02 21:46:17,572 INFO    pipeline - dbt | 16:46:15  Completed successfully
+2026-11-02 21:46:17,572 INFO    pipeline - dbt | 16:46:15  
+2026-11-02 21:46:17,572 INFO    pipeline - dbt | 16:46:15  Done. PASS=56 WARN=0 ERROR=0 SKIP=0 NO-OP=0 REUSED=0 TOTAL=56
+2026-11-02 21:46:17,572 INFO    pipeline - stage dbt-test         OK      (5.54s) dbt test succeeded
+2026-11-02 21:46:17,574 INFO    pipeline - running: dbt compile
+2026-11-02 21:46:22,353 INFO    pipeline - dbt | 16:46:18  Running with dbt=1.12.6
+2026-11-02 21:46:22,353 INFO    pipeline - dbt | 16:46:19  Registered adapter: duckdb=1.11.1
+2026-11-02 21:46:22,353 INFO    pipeline - dbt | 16:46:19  Found 4 models, 7 analyses, 56 data tests, 3 seeds, 2 sources, 511 macros
+2026-11-02 21:46:22,353 INFO    pipeline - dbt | 16:46:19  
+2026-11-02 21:46:22,353 INFO    pipeline - dbt | 16:46:19  Concurrency: 4 threads (target='dev')
+2026-11-02 21:46:22,354 INFO    pipeline - dbt | 16:46:19  
+2026-11-02 21:46:22,401 INFO    pipeline - analysis q1_prayer_frequency_by_religion_raised: 85 rows -> q1_prayer_frequency_by_religion_raised.csv
+2026-11-02 21:46:22,408 INFO    pipeline - analysis q2_belief_in_life_after_death_by_year: 3 rows -> q2_belief_in_life_after_death_by_year.csv
+2026-11-02 21:46:22,425 INFO    pipeline - analysis q3_top_industry_by_education: 15 rows -> q3_top_industry_by_education.csv
+2026-11-02 21:46:22,439 INFO    pipeline - analysis q4_tv_hours_vs_job_satisfaction: 10 rows -> q4_tv_hours_vs_job_satisfaction.csv
+2026-11-02 21:46:22,448 INFO    pipeline - analysis q5_nonworking_ever_worked_share: 1 rows -> q5_nonworking_ever_worked_share.csv
+2026-11-02 21:46:22,466 INFO    pipeline - analysis q6_news_and_tv_trends_by_wave: 24 rows -> q6_news_and_tv_trends_by_wave.csv
+2026-11-02 21:46:22,479 INFO    pipeline - analysis q7_extract_overlap_audit: 1 rows -> q7_extract_overlap_audit.csv
+2026-11-02 21:46:22,488 INFO    pipeline - stage analyses         OK      (4.92s) 7 analytical queries executed; results in C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\report\evidence\analysis_results
+2026-11-02 21:46:22,490 INFO    pipeline - running: dbt docs generate
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:23  Running with dbt=1.12.6
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:24  Registered adapter: duckdb=1.11.1
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:24  Found 4 models, 7 analyses, 56 data tests, 3 seeds, 2 sources, 511 macros
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:24  
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:24  Concurrency: 4 threads (target='dev')
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:24  
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:25  Building catalog
+2026-11-02 21:46:27,242 INFO    pipeline - dbt | 16:46:25  Catalog written to C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\dbt\target\catalog.json
+2026-11-02 21:46:27,242 INFO    pipeline - stage dbt-docs         OK      (4.75s) dbt docs generate succeeded
+2026-11-02 21:46:27,244 INFO    pipeline - run summary written to C:\Users\BD-Laptop\Desktop\assessments\data-engineer-yaqeen-institute\logs\summary_ff9d9c00b6.json
+2026-11-02 21:46:27,244 INFO    pipeline - run ff9d9c00b6 succeeded

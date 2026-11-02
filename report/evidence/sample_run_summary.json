@@ -1,0 +1,110 @@
+{
+  "run_id": "ff9d9c00b6",
+  "finished_at": "2026-11-02T16:46:27+00:00",
+  "status": "success",
+  "force": false,
+  "extracts": {
+    "gss_extract_1_2014_2016": {
+      "records_in_file": 5405,
+      "valid": 5405,
+      "quarantined": 0,
+      "duplicate_keys_in_file": 0
+    },
+    "gss_extract_2_2016_2018": {
+      "records_in_file": 5215,
+      "valid": 5215,
+      "quarantined": 0,
+      "duplicate_keys_in_file": 0
+    }
+  },
+  "loads": [
+    {
+      "extract_name": "gss_extract_1_2014_2016",
+      "status": "loaded",
+      "records_in_file": 5405,
+      "records_valid": 5405,
+      "records_quarantined": 0,
+      "records_inserted": 5405,
+      "records_replaced": 0,
+      "overlap_rows_with_other_extracts": 0
+    },
+    {
+      "extract_name": "gss_extract_2_2016_2018",
+      "status": "loaded",
+      "records_in_file": 5215,
+      "records_valid": 5215,
+      "records_quarantined": 0,
+      "records_inserted": 5215,
+      "records_replaced": 0,
+      "overlap_rows_with_other_extracts": 2867
+    }
+  ],
+  "stages": [
+    {
+      "stage": "check-env",
+      "status": "ok",
+      "duration_s": 0.0,
+      "detail": "python 3.12.10, dbt found, 2 extracts present"
+    },
+    {
+      "stage": "validate",
+      "status": "ok",
+      "duration_s": 0.08,
+      "detail": "10,620 records valid across 2 extracts, 0 quarantined"
+    },
+    {
+      "stage": "profile",
+      "status": "ok",
+      "duration_s": 0.06,
+      "detail": "profile written to data_profile.md; distinct observations 7,753, overlap 2,867"
+    },
+    {
+      "stage": "init-db",
+      "status": "ok",
+      "duration_s": 0.05,
+      "detail": "schema ready at C:\\Users\\BD-Laptop\\Desktop\\assessments\\data-engineer-yaqeen-institute\\source\\data\\processed\\gss.duckdb"
+    },
+    {
+      "stage": "ingest",
+      "status": "ok",
+      "duration_s": 17.91,
+      "detail": "gss_extract_1_2014_2016: loaded (5405 inserted); gss_extract_2_2016_2018: loaded (5215 inserted)"
+    },
+    {
+      "stage": "dbt-seed",
+      "status": "ok",
+      "duration_s": 6.36,
+      "detail": "dbt seed succeeded"
+    },
+    {
+      "stage": "dbt-source-test",
+      "status": "ok",
+      "duration_s": 6.04,
+      "detail": "dbt test --select source:* succeeded"
+    },
+    {
+      "stage": "dbt-run",
+      "status": "ok",
+      "duration_s": 6.08,
+      "detail": "dbt run succeeded"
+    },
+    {
+      "stage": "dbt-test",
+      "status": "ok",
+      "duration_s": 5.54,
+      "detail": "dbt test succeeded"
+    },
+    {
+      "stage": "analyses",
+      "status": "ok",
+      "duration_s": 4.92,
+      "detail": "7 analytical queries executed; results in C:\\Users\\BD-Laptop\\Desktop\\assessments\\data-engineer-yaqeen-institute\\report\\evidence\\analysis_results"
+    },
+    {
+      "stage": "dbt-docs",
+      "status": "ok",
+      "duration_s": 4.75,
+      "detail": "dbt docs generate succeeded"
+    }
+  ]
+}
