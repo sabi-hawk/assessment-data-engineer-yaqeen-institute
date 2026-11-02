@@ -1,0 +1,70 @@
+version: 2
+
+seeds:
+  - name: variable_metadata
+    description: >
+      One row per modelled GSS variable: the business question it answers, the
+      NORC variable label, value type, years available in the extracts, valid
+      numeric range, question universe and known limitations. Generated from
+      the official NORC year files by scripts/generate_seed_metadata.py.
+    columns:
+      - name: variable_name
+        data_tests: [unique, not_null]
+      - name: value_type
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [categorical, numeric]
+      - name: years_available
+        description: Pipe-separated survey years the variable is fielded in.
+        data_tests: [not_null]
+
+  - name: response_code_metadata
+    description: >
+      One row per (variable, code): the verbatim NORC value label, the response
+      class it maps to, and whether it is a genuine answer. Uniqueness of
+      (variable_name, code) is enforced by assert_seed_response_codes_unique.
+    columns:
+      - name: variable_name
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('variable_metadata')
+              field: variable_name
+      - name: code
+        description: Original GSS code as text ('.d'/'.i'/'.n' for missing tags).
+        data_tests: [not_null]
+      - name: response_class
+        data_tests:
+          - not_null
+          - accepted_values:
+              values:
+                - valid
+                - dont_know
+                - no_answer
+                - not_applicable
+                - skipped_on_web
+                - refused
+                - other_missing
+      - name: is_genuine_response
+        data_tests: [not_null]
+
+  - name: variable_ballot_availability
+    description: >
+      One row per (variable, year, ballot): whether the variable was fielded on
+      that ballot. Inferred from the data (>=99.5% IAP on a ballot = not
+      fielded) by scripts/generate_seed_metadata.py; lets models distinguish
+      'not asked on this ballot' from a genuine respondent-level filter.
+    columns:
+      - name: variable_name
+        data_tests:
+          - not_null
+          - relationships:
+              to: ref('variable_metadata')
+              field: variable_name
+      - name: year
+        data_tests: [not_null]
+      - name: ballot
+        data_tests: [not_null]
+      - name: asked_on_ballot
+        data_tests: [not_null]

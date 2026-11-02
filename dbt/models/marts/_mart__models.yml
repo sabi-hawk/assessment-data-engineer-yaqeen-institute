@@ -1,0 +1,57 @@
+version: 2
+
+models:
+  - name: mart_respondent_survey
+    description: >
+      Analysis-ready respondent-level model.
+      Grain: one row per respondent-year observation; primary key
+      respondent_key ('YYYY-NNNN'). Overlapping respondents between the two
+      extracts appear exactly once, with in_extract_1/in_extract_2 provenance
+      flags. Each survey variable carries its original code (audit trail), a
+      readable label or typed value, and a response_class that distinguishes a
+      genuine answer from every missing state (don't know / no answer / not
+      applicable / not asked on ballot / not asked in year / system missing).
+      Counts are unweighted; multiply by sample_weight (WTSSPS) for
+      population-representative estimates.
+    columns:
+      - name: respondent_key
+        description: Primary key, 'YYYY-NNNN'.
+        data_tests:
+          - unique
+          - not_null
+      - name: survey_year
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [2014, 2016, 2018]
+              quote: false
+      - name: respondent_id
+        data_tests: [not_null]
+      - name: sample_weight
+        description: WTSSPS post-stratification weight.
+        data_tests: [not_null]
+      - name: postlife_response_class
+        description: Response state for belief in life after death.
+        data_tests:
+          - accepted_values:
+              values: [valid, dont_know, no_answer, not_applicable, not_asked_ballot, not_asked_in_year, system_missing]
+      - name: pray_response_class
+        data_tests:
+          - accepted_values:
+              values: [valid, dont_know, no_answer, not_applicable, not_asked_ballot, not_asked_in_year, system_missing]
+      - name: news_response_class
+        data_tests:
+          - accepted_values:
+              values: [valid, dont_know, no_answer, not_applicable, not_asked_ballot, not_asked_in_year, system_missing]
+      - name: tvhours_response_class
+        data_tests:
+          - accepted_values:
+              values: [valid, dont_know, no_answer, not_applicable, not_asked_ballot, not_asked_in_year, system_missing]
+      - name: tvhours_value
+        description: Hours of TV per day (null unless response_class = 'valid').
+      - name: wwwhr_value
+        description: Weekly web hours (null unless response_class = 'valid').
+      - name: age_value
+        description: Age in years, top-coded at 89.
+      - name: educ_value
+        description: Years of schooling completed.

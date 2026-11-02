@@ -1,0 +1,86 @@
+religion_raised_in,prayer_frequency,respondents,pct_within_religion
+(dont_know),several times a day,7,36.8
+(dont_know),once a day,5,26.3
+(dont_know),several times a week,2,10.5
+(dont_know),less than once a week,3,15.8
+(dont_know),never,2,10.5
+(dont_know),(dont_know),2,
+(dont_know),(no_answer),2,
+(no_answer),several times a day,4,33.3
+(no_answer),once a day,2,16.7
+(no_answer),several times a week,2,16.7
+(no_answer),once a week,2,16.7
+(no_answer),never,2,16.7
+(no_answer),(dont_know),1,
+(no_answer),(no_answer),16,
+buddhism,several times a day,5,15.2
+buddhism,once a day,7,21.2
+buddhism,several times a week,1,3.0
+buddhism,once a week,4,12.1
+buddhism,less than once a week,9,27.3
+buddhism,never,7,21.2
+catholic,several times a day,601,23.9
+catholic,once a day,834,33.2
+catholic,several times a week,267,10.6
+catholic,once a week,182,7.2
+catholic,less than once a week,276,11.0
+catholic,never,355,14.1
+catholic,(dont_know),5,
+catholic,(no_answer),7,
+christian,several times a day,28,25.2
+christian,once a day,27,24.3
+christian,several times a week,15,13.5
+christian,once a week,8,7.2
+christian,less than once a week,15,13.5
+christian,never,18,16.2
+christian,(no_answer),1,
+hinduism,several times a day,7,16.7
+hinduism,once a day,17,40.5
+hinduism,several times a week,5,11.9
+hinduism,once a week,3,7.1
+hinduism,less than once a week,4,9.5
+hinduism,never,6,14.3
+jewish,several times a day,23,16.8
+jewish,once a day,17,12.4
+jewish,several times a week,10,7.3
+jewish,once a week,7,5.1
+jewish,less than once a week,25,18.2
+jewish,never,55,40.1
+jewish,(dont_know),1,
+muslim/islam,several times a day,28,57.1
+muslim/islam,once a day,6,12.2
+muslim/islam,several times a week,6,12.2
+muslim/islam,once a week,3,6.1
+muslim/islam,less than once a week,1,2.0
+muslim/islam,never,5,10.2
+native american,several times a day,3,60.0
+native american,once a day,2,40.0
+none,several times a day,118,17.3
+none,once a day,130,19.1
+none,several times a week,58,8.5
+none,once a week,34,5.0
+none,less than once a week,86,12.6
+none,never,256,37.5
+none,(dont_know),8,
+none,(no_answer),5,
+orthodox-christian,several times a day,13,37.1
+orthodox-christian,once a day,3,8.6
+orthodox-christian,several times a week,4,11.4
+orthodox-christian,once a week,3,8.6
+orthodox-christian,less than once a week,2,5.7
+orthodox-christian,never,10,28.6
+other,several times a day,6,14.0
+other,once a day,14,32.6
+other,several times a week,8,18.6
+other,once a week,3,7.0
+other,less than once a week,4,9.3
+other,never,8,18.6
+other,(dont_know),1,
+protestant,several times a day,1413,35.3
+protestant,once a day,1200,29.9
+protestant,several times a week,397,9.9
+protestant,once a week,219,5.5
+protestant,less than once a week,346,8.6
+protestant,never,432,10.8
+protestant,(dont_know),3,
+protestant,(no_answer),11,

@@ -1,0 +1,20 @@
+variable_name,business_question,description,value_type,years_available,valid_min,valid_max,universe,limitations
+wrkstat,What is the respondent's working status?,Labor force status,categorical,2014|2016|2018,,,All respondents,
+evwork,If not currently working: have they ever worked for as long as one year?,Ever work as long as one year,categorical,2014|2016|2018,,,Respondents not currently working (IAP for those working full/part time),"The GSS asks 'as long as one year', which operationalises the brief's '12 months or more'."
+degree,What is the respondent's education level? (highest degree),R's highest degree,categorical,2014|2016|2018,,,All respondents,
+indus10,What industry does the respondent work in?,R's industry code (NAICS 2007),categorical,2014|2016|2018,,,Respondents who are working or have ever worked,"NAICS 2007 industry codes (NORC variable label); very granular, so analyses group or rank rather than enumerate."
+satjob,How satisfied are they with their line of work?,Work satisfaction,categorical,2014|2016|2018,,,Respondents currently or previously working,
+postlife,Do they believe in life after death?,Belief in life after death,categorical,2014|2016|2018,,,All respondents in 2014/2016/2018,"High share of genuine 'don't know' answers (~10%): a substantive response, kept distinct."
+pray,How frequently does the respondent pray?,How often Does R pray,categorical,2014|2016|2018,,,All respondents,
+relig16,Which religion was the respondent raised in?,Religion in which raised,categorical,2014|2016|2018,,,All respondents,
+news,How often does the respondent read a newspaper?,How often Does R read newspaper,categorical,2014|2016|2018,,,Ballots 1-2 only (not fielded on ballot 3 in 2014-2018),
+inttech,Is the respondent interested in technology? (interest in new technologies),Interested in technologies,categorical,2014|2016|2018,,,Science-module subsample; ballot rotation differs per year,
+relig,Respondent's current religious preference,R's religious preference,categorical,2014|2016|2018,,,All respondents,
+attend,How often the respondent attends religious services,How often R attends religious services,categorical,2014|2016|2018,,,All respondents,
+reliten,Strength of religious affiliation,Strength of affiliation,categorical,2014|2016|2018,,,Respondents with a religious preference,
+sex,Respondent's sex,Respondents sex,categorical,2014|2016|2018,,,All respondents,
+region,Census region of interview,Region of interview,categorical,2014|2016|2018,,,All respondents,
+educ,What is the respondent's education level? (years of school),Highest year of school completed,numeric,2014|2016|2018,0,20,All respondents,
+tvhours,How often does the respondent watch TV? (hours per day),Hours per day watching TV,numeric,2014|2016|2018,0,24,Ballots 1-2 only (not fielded on ballot 3 in 2014-2018),
+wwwhr,Hours per week using the web,Www hours per week,numeric,2014|2016|2018,0,168,Internet users on ballots 1-2,IAP combines ballot rotation (ballot 3) and the non-user filter; the ballot seed separates them.
+age,Respondent's age,Age of respondent,numeric,2014|2016|2018,18,89,All respondents,Top-coded at 89 ('89 or older').

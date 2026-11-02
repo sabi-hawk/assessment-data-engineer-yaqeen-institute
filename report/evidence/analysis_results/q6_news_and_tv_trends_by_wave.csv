@@ -1,0 +1,25 @@
+metric,survey_year,category,respondents,answered_in_year,pct_of_answered,pct_point_change_vs_previous_wave
+newspaper reading (NEWS),2014,every day,417,1675,24.9,
+newspaper reading (NEWS),2016,every day,398,1885,21.1,-3.8
+newspaper reading (NEWS),2018,every day,312,1559,20.0,-1.1
+newspaper reading (NEWS),2014,a few times a week,260,1675,15.5,
+newspaper reading (NEWS),2016,a few times a week,270,1885,14.3,-1.2
+newspaper reading (NEWS),2018,a few times a week,174,1559,11.2,-3.1
+newspaper reading (NEWS),2014,once a week,246,1675,14.7,
+newspaper reading (NEWS),2016,once a week,229,1885,12.1,-2.6
+newspaper reading (NEWS),2018,once a week,184,1559,11.8,-0.3
+newspaper reading (NEWS),2014,less than once a week,271,1675,16.2,
+newspaper reading (NEWS),2016,less than once a week,300,1885,15.9,-0.3
+newspaper reading (NEWS),2018,less than once a week,211,1559,13.5,-2.4
+newspaper reading (NEWS),2014,never,481,1675,28.7,
+newspaper reading (NEWS),2016,never,688,1885,36.5,7.8
+newspaper reading (NEWS),2018,never,678,1559,43.5,7.0
+"tv viewing (TVHOURS, grouped)",2014,0-1 hours/day,430,1669,25.8,
+"tv viewing (TVHOURS, grouped)",2016,0-1 hours/day,532,1883,28.3,2.5
+"tv viewing (TVHOURS, grouped)",2018,0-1 hours/day,494,1555,31.8,3.5
+"tv viewing (TVHOURS, grouped)",2014,2-3 hours/day,730,1669,43.7,
+"tv viewing (TVHOURS, grouped)",2016,2-3 hours/day,783,1883,41.6,-2.1
+"tv viewing (TVHOURS, grouped)",2018,2-3 hours/day,616,1555,39.6,-2.0
+"tv viewing (TVHOURS, grouped)",2014,4+ hours/day,509,1669,30.5,
+"tv viewing (TVHOURS, grouped)",2016,4+ hours/day,568,1883,30.2,-0.3
+"tv viewing (TVHOURS, grouped)",2018,4+ hours/day,445,1555,28.6,-1.6

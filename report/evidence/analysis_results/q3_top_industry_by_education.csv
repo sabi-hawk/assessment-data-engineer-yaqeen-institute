@@ -1,0 +1,16 @@
+education_level,industry,working_respondents,industry_rank,is_most_common,industry_missing_for_education
+less than high school,construction,53,1,True,2
+less than high school,restaurants and other food services,41,2,False,2
+less than high school,landscaping services,17,3,False,2
+high school,construction,186,1,True,15
+high school,restaurants and other food services,162,2,False,15
+high school,hospitals,81,3,False,15
+associate/junior college,hospitals,41,1,True,4
+associate/junior college,construction,16,2,False,4
+associate/junior college,restaurants and other food services,16,3,False,4
+bachelor's,elementary and secondary schools,109,1,True,6
+bachelor's,hospitals,64,2,False,6
+bachelor's,construction,36,3,False,6
+graduate,elementary and secondary schools,94,1,True,8
+graduate,"colleges and universities, including junior colleges",67,2,False,8
+graduate,hospitals,37,3,False,8

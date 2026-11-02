@@ -1,0 +1,30 @@
+# Environment / secrets
+.env
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+*.egg-info/
+
+# Local database and downloaded NORC source files (rebuilt by the pipeline)
+source/data/processed/*
+!source/data/processed/.gitkeep
+source/data/external/*
+!source/data/external/.gitkeep
+
+# dbt artifacts
+dbt/target/
+dbt/dbt_packages/
+dbt/logs/
+dbt/profiles.yml
+
+# Run logs (evidence copies live under /report/evidence)
+logs/*
+!logs/.gitkeep
+
+# OS / editor noise
+.DS_Store
+Thumbs.db

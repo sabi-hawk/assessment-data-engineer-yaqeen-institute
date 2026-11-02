@@ -1,0 +1,12 @@
+# Copy to dbt/profiles.yml (git-ignored); the pipeline's check-env stage does
+# this automatically. Contains no credentials: DuckDB is a local file.
+#
+# The default path is relative to the working directory, so run dbt from the
+# repository root (the orchestrator does), or set GSS_DB_PATH to an absolute path.
+gss:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: "{{ env_var('GSS_DB_PATH', 'source/data/processed/gss.duckdb') }}"
+      threads: 4

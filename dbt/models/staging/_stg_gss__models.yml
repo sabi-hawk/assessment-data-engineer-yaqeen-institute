@@ -1,0 +1,46 @@
+version: 2
+
+models:
+  - name: stg_gss__respondents
+    description: >
+      Deduplicated respondent-year observations from both extracts.
+      Grain: one row per (survey_year, respondent_id); respondent_key is the
+      surrogate string form 'YYYY-NNNN'. Original GSS response codes are kept
+      verbatim in *_code columns (text: numeric codes or '.d'/'.i'/'.n' missing
+      tags); decoding happens downstream against the metadata seeds.
+    columns:
+      - name: respondent_key
+        description: Natural key rendered as 'YYYY-NNNN' (survey year + respondent id).
+        data_tests:
+          - unique
+          - not_null
+      - name: survey_year
+        description: GSS survey year.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [2014, 2016, 2018]
+              quote: false
+      - name: respondent_id
+        description: NORC respondent id (unique within a survey year only).
+        data_tests:
+          - not_null
+      - name: ballot
+        description: Questionnaire ballot (1-3).
+        data_tests:
+          - not_null
+          - accepted_values:
+              values: [1, 2, 3]
+              quote: false
+      - name: sample_weight
+        description: >
+          WTSSPS post-stratification weight as double. Unweighted counts are
+          the default in the analyses; this column lets analysts weight.
+        data_tests:
+          - not_null
+      - name: source_extract_count
+        description: How many extracts delivered this observation (1 or 2).
+      - name: in_extract_1
+        description: Observation present in gss_extract_1_2014_2016.
+      - name: in_extract_2
+        description: Observation present in gss_extract_2_2016_2018.

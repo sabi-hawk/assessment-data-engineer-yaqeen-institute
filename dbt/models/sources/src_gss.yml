@@ -1,0 +1,68 @@
+version: 2
+
+sources:
+  - name: gss_raw
+    description: >
+      Raw layer owned by the Python pipeline (source/pipeline). Records are
+      preserved exactly as received from the committed JSON extracts: original
+      GSS response codes as text, Stata tagged missing values as '.d'/'.i'/'.n'
+      strings, one row per (extract_name, year, id). dbt never writes here.
+    schema: raw
+    tables:
+      - name: extract_records
+        description: >
+          One row per respondent-year observation per extract. Overlapping
+          respondents (the shared 2016 wave) appear once per extract here and
+          are deduplicated in staging; this keeps raw a faithful copy of the
+          source files. Primary key (extract_name, year, id) is enforced by
+          the loader.
+        columns:
+          - name: extract_name
+            description: Which committed extract the row arrived from (provenance).
+            data_tests:
+              - not_null
+              - accepted_values:
+                  values: ["gss_extract_1_2014_2016", "gss_extract_2_2016_2018"]
+          - name: year
+            description: GSS survey year (part of the natural key).
+            data_tests:
+              - not_null
+              - accepted_values:
+                  values: [2014, 2016, 2018]
+                  quote: false
+          - name: id
+            description: >
+              NORC respondent id. Restarts at 1 every survey year, so it is
+              only unique together with year.
+            data_tests:
+              - not_null
+          - name: ballot
+            description: Questionnaire ballot (1-3); drives item rotation.
+            data_tests:
+              - not_null
+              - accepted_values:
+                  values: ["1", "2", "3"]
+          - name: wtssps
+            description: Post-stratification sample weight, stored verbatim.
+            data_tests:
+              - not_null
+          - name: run_id
+            description: Pipeline run that loaded the row.
+          - name: loaded_at
+            description: Load timestamp (UTC).
+
+      - name: load_audit
+        description: >
+          One row per extract load attempt - run id, file sha256, record
+          counts, overlap rows and final status. The observability trail for
+          "what ran, what it processed, and why it failed".
+        columns:
+          - name: run_id
+            data_tests: [not_null]
+          - name: extract_name
+            data_tests: [not_null]
+          - name: status
+            data_tests:
+              - not_null
+              - accepted_values:
+                  values: ["loaded", "skipped_unchanged", "failed"]

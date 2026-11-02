@@ -1,0 +1,387 @@
+variable_name,code,label,response_class,is_genuine_response,metadata_source
+wrkstat,1,working full time,valid,true,NORC GSS single-year Stata release value labels
+wrkstat,2,working part time,valid,true,NORC GSS single-year Stata release value labels
+wrkstat,3,"with a job, but not at work because of temporary illness, vacation, strike",valid,true,NORC GSS single-year Stata release value labels
+wrkstat,4,"unemployed, laid off, looking for work",valid,true,NORC GSS single-year Stata release value labels
+wrkstat,5,retired,valid,true,NORC GSS single-year Stata release value labels
+wrkstat,6,in school,valid,true,NORC GSS single-year Stata release value labels
+wrkstat,7,keeping house,valid,true,NORC GSS single-year Stata release value labels
+wrkstat,8,other,valid,true,NORC GSS single-year Stata release value labels
+wrkstat,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+evwork,1,yes,valid,true,NORC GSS single-year Stata release value labels
+evwork,2,no,valid,true,NORC GSS single-year Stata release value labels
+evwork,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+evwork,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+degree,0,less than high school,valid,true,NORC GSS single-year Stata release value labels
+degree,1,high school,valid,true,NORC GSS single-year Stata release value labels
+degree,2,associate/junior college,valid,true,NORC GSS single-year Stata release value labels
+degree,3,bachelor's,valid,true,NORC GSS single-year Stata release value labels
+degree,4,graduate,valid,true,NORC GSS single-year Stata release value labels
+degree,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+indus10,170,crop production,valid,true,NORC GSS single-year Stata release value labels
+indus10,180,animal production,valid,true,NORC GSS single-year Stata release value labels
+indus10,190,"forestry, except logging",valid,true,NORC GSS single-year Stata release value labels
+indus10,270,logging,valid,true,NORC GSS single-year Stata release value labels
+indus10,280,"fishing, hunting, and trapping",valid,true,NORC GSS single-year Stata release value labels
+indus10,290,support activities for agriculture and forestry,valid,true,NORC GSS single-year Stata release value labels
+indus10,370,oil and gas extraction,valid,true,NORC GSS single-year Stata release value labels
+indus10,380,coal mining,valid,true,NORC GSS single-year Stata release value labels
+indus10,390,metal ore mining,valid,true,NORC GSS single-year Stata release value labels
+indus10,470,nonmetallic mineral mining and quarrying,valid,true,NORC GSS single-year Stata release value labels
+indus10,480,not specified type of mining,valid,true,NORC GSS single-year Stata release value labels
+indus10,490,support activities for mining,valid,true,NORC GSS single-year Stata release value labels
+indus10,570,"electric power generation, transmission, and distribution",valid,true,NORC GSS single-year Stata release value labels
+indus10,580,natural gas distribution,valid,true,NORC GSS single-year Stata release value labels
+indus10,590,"electric and gas, and other combinations",valid,true,NORC GSS single-year Stata release value labels
+indus10,670,"water, steam, air-conditioning, and irrigation systems",valid,true,NORC GSS single-year Stata release value labels
+indus10,680,sewage treatment facilities,valid,true,NORC GSS single-year Stata release value labels
+indus10,690,not specified utilities,valid,true,NORC GSS single-year Stata release value labels
+indus10,770,construction,valid,true,NORC GSS single-year Stata release value labels
+indus10,1070,"animal food, grain, and oilseed milling",valid,true,NORC GSS single-year Stata release value labels
+indus10,1080,sugar and confectionery products,valid,true,NORC GSS single-year Stata release value labels
+indus10,1090,fruit and vegetable preserving and specialty food manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1170,dairy product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1180,animal slaughtering and processing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1190,retail bakeries,valid,true,NORC GSS single-year Stata release value labels
+indus10,1270,"bakeries, except retail",valid,true,NORC GSS single-year Stata release value labels
+indus10,1280,"seafood and other miscellaneous foods, n.e.c.",valid,true,NORC GSS single-year Stata release value labels
+indus10,1290,not specified food industries,valid,true,NORC GSS single-year Stata release value labels
+indus10,1370,beverage manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1390,tobacco manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1470,"fiber, yarn, and thread mills",valid,true,NORC GSS single-year Stata release value labels
+indus10,1480,"fabric mills, except knitting mills",valid,true,NORC GSS single-year Stata release value labels
+indus10,1490,textile and fabric finishing and coating mills,valid,true,NORC GSS single-year Stata release value labels
+indus10,1570,carpet and rug mills,valid,true,NORC GSS single-year Stata release value labels
+indus10,1590,"textile product mills, except carpet and rug",valid,true,NORC GSS single-year Stata release value labels
+indus10,1670,"knitting fabric mills, and apparel knitting mills",valid,true,NORC GSS single-year Stata release value labels
+indus10,1680,cut and sew apparel manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1690,apparel accessories and other apparel manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1770,footwear manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1790,leather tanning and finishing and other allied products manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,1870,"pulp, paper, and paperboard mills",valid,true,NORC GSS single-year Stata release value labels
+indus10,1880,paperboard containers and boxes,valid,true,NORC GSS single-year Stata release value labels
+indus10,1890,miscellaneous paper and pulp products,valid,true,NORC GSS single-year Stata release value labels
+indus10,1990,printing and related support activities,valid,true,NORC GSS single-year Stata release value labels
+indus10,2070,petroleum refining,valid,true,NORC GSS single-year Stata release value labels
+indus10,2090,miscellaneous petroleum and coal products,valid,true,NORC GSS single-year Stata release value labels
+indus10,2170,"resin, synthetic rubber and fibers, and filaments manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2180,agricultural chemical manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2190,pharmaceutical and medicine manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2270,"paint, coating, and adhesive manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2280,"soap, cleaning compound, and cosmetics manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2290,industrial and miscellaneous chemicals,valid,true,NORC GSS single-year Stata release value labels
+indus10,2370,plastics product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2380,tire manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2390,"rubber product, except tire, manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2470,"pottery, ceramics, and plumbing fixture manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2480,structural clay product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2490,glass and glass product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2570,"cement, concrete, lime, and gypsum product manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2590,miscellaneous nonmetallic mineral product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2670,iron and steel mills and steel product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2680,aluminum production and processing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2690,nonferrous metal (except aluminum) production and processing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2770,foundries,valid,true,NORC GSS single-year Stata release value labels
+indus10,2780,metal forgings and stampings,valid,true,NORC GSS single-year Stata release value labels
+indus10,2790,cutlery and hand tool manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2870,"structural metals, and boiler, tank, and shipping container manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2880,"machine shops; turned product; screw, nut, and bolt manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,2890,"coating, engraving, heat treating and allied activities",valid,true,NORC GSS single-year Stata release value labels
+indus10,2970,ordnance,valid,true,NORC GSS single-year Stata release value labels
+indus10,2980,miscellaneous fabricated metal products manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,2990,not specified metal industries,valid,true,NORC GSS single-year Stata release value labels
+indus10,3070,agricultural implement manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3080,"construction, and mining and oil and gas field machinery manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,3090,commercial and service industry machinery manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3170,metalworking machinery manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3180,"engines, turbines, and power transmission equipment manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,3190,"machinery manufacturing, n.e.c.",valid,true,NORC GSS single-year Stata release value labels
+indus10,3290,not specified machinery manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3360,computer and peripheral equipment manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3370,"communications, and audio and video equipment manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,3380,"navigational, measuring, electromedical, and control instruments manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,3390,"electronic component and product manufacturing, n.e.c.",valid,true,NORC GSS single-year Stata release value labels
+indus10,3470,household appliance manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3490,"electrical lighting and electrical equipment manufacturing, and other electrical component manufacturing, n.e.c.",valid,true,NORC GSS single-year Stata release value labels
+indus10,3570,motor vehicles and motor vehicle equipment manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3580,aircraft and parts manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3590,aerospace product and parts manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3670,railroad rolling stock manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3680,ship and boat building,valid,true,NORC GSS single-year Stata release value labels
+indus10,3690,other transportation equipment manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3770,sawmills and wood preservation,valid,true,NORC GSS single-year Stata release value labels
+indus10,3780,"veneer, plywood, and engineered wood products",valid,true,NORC GSS single-year Stata release value labels
+indus10,3790,prefabricated wood buildings and mobile homes,valid,true,NORC GSS single-year Stata release value labels
+indus10,3870,miscellaneous wood products,valid,true,NORC GSS single-year Stata release value labels
+indus10,3890,furniture and related product manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3960,medical equipment and supplies manufacturing,valid,true,NORC GSS single-year Stata release value labels
+indus10,3970,"sporting and athletic goods, and doll, toy and game manufacturing",valid,true,NORC GSS single-year Stata release value labels
+indus10,3980,"miscellaneous manufacturing, n.e.c.",valid,true,NORC GSS single-year Stata release value labels
+indus10,3990,not specified manufacturing industries,valid,true,NORC GSS single-year Stata release value labels
+indus10,4070,"motor vehicles, parts and supplies, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4080,"furniture and home furnishing, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4090,"lumber and other construction materials, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4170,"professional and commercial equipment and supplies, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4180,"metals and minerals, except petroleum, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4190,"electrical and electronic goods, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4260,"hardware, plumbing and heating equipment, and supplies, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4270,"machinery, equipment, and supplies, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4280,"recyclable material, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4290,"miscellaneous durable goods, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4370,"paper and paper products, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4380,"drugs, sundries, and chemical and allied products, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4390,"apparel, fabrics, and notions, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4470,"groceries and related products, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4480,"farm product raw materials, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4490,"petroleum and petroleum products, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4560,"alcoholic beverages, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4570,"farm supplies, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4580,"miscellaneous nondurable goods, merchant wholesalers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4585,"wholesale electronic markets, agents and brokers",valid,true,NORC GSS single-year Stata release value labels
+indus10,4590,not specified wholesale trade,valid,true,NORC GSS single-year Stata release value labels
+indus10,4670,automobile dealers,valid,true,NORC GSS single-year Stata release value labels
+indus10,4680,other motor vehicle dealers,valid,true,NORC GSS single-year Stata release value labels
+indus10,4690,"auto parts, accessories, and tire stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,4770,furniture and home furnishings stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,4780,household appliance stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,4790,"radio, tv, and computer stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,4870,building material and supplies dealers,valid,true,NORC GSS single-year Stata release value labels
+indus10,4880,hardware stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,4890,lawn and garden equipment and supplies stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,4970,grocery stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,4980,specialty food stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,4990,"beer, wine, and liquor stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,5070,pharmacies and drug stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5080,"health and personal care, except drug, stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,5090,gasoline stations,valid,true,NORC GSS single-year Stata release value labels
+indus10,5170,clothing stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5180,shoe stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5190,"jewelry, luggage, and leather goods stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,5270,"sporting goods, camera, and hobby and toy stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,5280,"sewing, needlework, and piece goods stores",valid,true,NORC GSS single-year Stata release value labels
+indus10,5290,music stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5370,book stores and news dealers,valid,true,NORC GSS single-year Stata release value labels
+indus10,5380,department stores and discount stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5390,miscellaneous general merchandise stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5470,retail florists,valid,true,NORC GSS single-year Stata release value labels
+indus10,5480,office supplies and stationery stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5490,used merchandise stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5570,"gift, novelty, and souvenir shops",valid,true,NORC GSS single-year Stata release value labels
+indus10,5580,miscellaneous retail stores,valid,true,NORC GSS single-year Stata release value labels
+indus10,5590,electronic shopping,valid,true,NORC GSS single-year Stata release value labels
+indus10,5591,electronic auctions,valid,true,NORC GSS single-year Stata release value labels
+indus10,5592,mail order houses,valid,true,NORC GSS single-year Stata release value labels
+indus10,5670,vending machine operators,valid,true,NORC GSS single-year Stata release value labels
+indus10,5680,fuel dealers,valid,true,NORC GSS single-year Stata release value labels
+indus10,5690,other direct selling establishments,valid,true,NORC GSS single-year Stata release value labels
+indus10,5790,not specified retail trade,valid,true,NORC GSS single-year Stata release value labels
+indus10,6070,air transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6080,rail transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6090,water transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6170,truck transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6180,bus service and urban transit,valid,true,NORC GSS single-year Stata release value labels
+indus10,6190,taxi and limousine service,valid,true,NORC GSS single-year Stata release value labels
+indus10,6270,pipeline transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6280,scenic and sightseeing transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6290,services incidental to transportation,valid,true,NORC GSS single-year Stata release value labels
+indus10,6370,postal service,valid,true,NORC GSS single-year Stata release value labels
+indus10,6380,couriers and messengers,valid,true,NORC GSS single-year Stata release value labels
+indus10,6390,warehousing and storage,valid,true,NORC GSS single-year Stata release value labels
+indus10,6470,newspaper publishers,valid,true,NORC GSS single-year Stata release value labels
+indus10,6480,"periodical, book, and directory publishers",valid,true,NORC GSS single-year Stata release value labels
+indus10,6490,software publishers,valid,true,NORC GSS single-year Stata release value labels
+indus10,6570,motion pictures and video industries,valid,true,NORC GSS single-year Stata release value labels
+indus10,6590,sound recording industries,valid,true,NORC GSS single-year Stata release value labels
+indus10,6670,radio and television broadcasting and cable subscription programming,valid,true,NORC GSS single-year Stata release value labels
+indus10,6672,internet publishing and broadcasting and web search portals,valid,true,NORC GSS single-year Stata release value labels
+indus10,6680,wired telecommunications carriers,valid,true,NORC GSS single-year Stata release value labels
+indus10,6690,other telecommunications services,valid,true,NORC GSS single-year Stata release value labels
+indus10,6695,"data processing, hosting, and related services",valid,true,NORC GSS single-year Stata release value labels
+indus10,6770,libraries and archives,valid,true,NORC GSS single-year Stata release value labels
+indus10,6780,other information services,valid,true,NORC GSS single-year Stata release value labels
+indus10,6870,banking and related activities,valid,true,NORC GSS single-year Stata release value labels
+indus10,6880,"savings institutions, including credit unions",valid,true,NORC GSS single-year Stata release value labels
+indus10,6890,non-depository credit and related activities,valid,true,NORC GSS single-year Stata release value labels
+indus10,6970,"securities, commodities, funds, trusts, and other financial investments",valid,true,NORC GSS single-year Stata release value labels
+indus10,6990,insurance carriers and related activities,valid,true,NORC GSS single-year Stata release value labels
+indus10,7070,real estate,valid,true,NORC GSS single-year Stata release value labels
+indus10,7080,automotive equipment rental and leasing,valid,true,NORC GSS single-year Stata release value labels
+indus10,7170,video tape and disk rental,valid,true,NORC GSS single-year Stata release value labels
+indus10,7180,other consumer goods rental,valid,true,NORC GSS single-year Stata release value labels
+indus10,7190,"commercial, industrial, and other intangible assets rental and leasing",valid,true,NORC GSS single-year Stata release value labels
+indus10,7270,legal services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7280,"accounting, tax preparation, bookkeeping, and payroll services",valid,true,NORC GSS single-year Stata release value labels
+indus10,7290,"architectural, engineering, and related services",valid,true,NORC GSS single-year Stata release value labels
+indus10,7370,specialized design services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7380,computer systems design and related services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7390,"management, scientific, and technical consulting services",valid,true,NORC GSS single-year Stata release value labels
+indus10,7460,scientific research and development services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7470,advertising and related services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7480,veterinary services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7490,"other professional, scientific, and technical services",valid,true,NORC GSS single-year Stata release value labels
+indus10,7570,management of companies and enterprises,valid,true,NORC GSS single-year Stata release value labels
+indus10,7580,employment services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7590,business support services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7670,travel arrangements and reservation services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7680,investigation and security services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7690,services to buildings and dwellings,valid,true,NORC GSS single-year Stata release value labels
+indus10,7770,landscaping services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7780,other administrative and other support services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7790,waste management and remediation services,valid,true,NORC GSS single-year Stata release value labels
+indus10,7860,elementary and secondary schools,valid,true,NORC GSS single-year Stata release value labels
+indus10,7870,"colleges and universities, including junior colleges",valid,true,NORC GSS single-year Stata release value labels
+indus10,7880,"business, technical, and trade schools and training",valid,true,NORC GSS single-year Stata release value labels
+indus10,7890,"other schools and instruction, and educational support services",valid,true,NORC GSS single-year Stata release value labels
+indus10,7970,offices of physicians,valid,true,NORC GSS single-year Stata release value labels
+indus10,7980,offices of dentists,valid,true,NORC GSS single-year Stata release value labels
+indus10,7990,offices of chiropractors,valid,true,NORC GSS single-year Stata release value labels
+indus10,8070,offices of optometrists,valid,true,NORC GSS single-year Stata release value labels
+indus10,8080,offices of other health practitioners,valid,true,NORC GSS single-year Stata release value labels
+indus10,8090,outpatient care centers,valid,true,NORC GSS single-year Stata release value labels
+indus10,8170,home health care services,valid,true,NORC GSS single-year Stata release value labels
+indus10,8180,other health care services,valid,true,NORC GSS single-year Stata release value labels
+indus10,8190,hospitals,valid,true,NORC GSS single-year Stata release value labels
+indus10,8270,nursing care facilities,valid,true,NORC GSS single-year Stata release value labels
+indus10,8290,"residential care facilities, without nursing",valid,true,NORC GSS single-year Stata release value labels
+indus10,8370,individual and family services,valid,true,NORC GSS single-year Stata release value labels
+indus10,8380,"community food and housing, and emergency services",valid,true,NORC GSS single-year Stata release value labels
+indus10,8390,vocational rehabilitation services,valid,true,NORC GSS single-year Stata release value labels
+indus10,8470,child day care services,valid,true,NORC GSS single-year Stata release value labels
+indus10,8560,"independent artists, performing arts, spectator sports, and related industries",valid,true,NORC GSS single-year Stata release value labels
+indus10,8570,"museums, art galleries, historical sites, and similar institutions",valid,true,NORC GSS single-year Stata release value labels
+indus10,8580,bowling centers,valid,true,NORC GSS single-year Stata release value labels
+indus10,8590,"other amusement, gambling, and recreation industries",valid,true,NORC GSS single-year Stata release value labels
+indus10,8660,traveler accommodation,valid,true,NORC GSS single-year Stata release value labels
+indus10,8670,"recreational vehicle parks and camps, and rooming and boarding houses",valid,true,NORC GSS single-year Stata release value labels
+indus10,8680,restaurants and other food services,valid,true,NORC GSS single-year Stata release value labels
+indus10,8690,"drinking places, alcoholic beverages",valid,true,NORC GSS single-year Stata release value labels
+indus10,8770,automotive repair and maintenance,valid,true,NORC GSS single-year Stata release value labels
+indus10,8780,car washes,valid,true,NORC GSS single-year Stata release value labels
+indus10,8790,electronic and precision equipment repair and maintenance,valid,true,NORC GSS single-year Stata release value labels
+indus10,8870,commercial and industrial machinery and equipment repair and maintenance,valid,true,NORC GSS single-year Stata release value labels
+indus10,8880,personal and household goods repair and maintenance,valid,true,NORC GSS single-year Stata release value labels
+indus10,8890,footwear and leather goods repair,valid,true,NORC GSS single-year Stata release value labels
+indus10,8970,barber shops,valid,true,NORC GSS single-year Stata release value labels
+indus10,8980,beauty salons,valid,true,NORC GSS single-year Stata release value labels
+indus10,8990,nail salons and other personal care services,valid,true,NORC GSS single-year Stata release value labels
+indus10,9070,drycleaning and laundry services,valid,true,NORC GSS single-year Stata release value labels
+indus10,9080,"funeral homes, and cemeteries and crematories",valid,true,NORC GSS single-year Stata release value labels
+indus10,9090,other personal services,valid,true,NORC GSS single-year Stata release value labels
+indus10,9160,religious organizations,valid,true,NORC GSS single-year Stata release value labels
+indus10,9170,"civic, social, advocacy organizations, and grantmaking and giving services",valid,true,NORC GSS single-year Stata release value labels
+indus10,9180,labor unions,valid,true,NORC GSS single-year Stata release value labels
+indus10,9190,"business, professional, political, and similar organizations",valid,true,NORC GSS single-year Stata release value labels
+indus10,9290,private households,valid,true,NORC GSS single-year Stata release value labels
+indus10,9370,executive offices and legislative bodies,valid,true,NORC GSS single-year Stata release value labels
+indus10,9380,public finance activities,valid,true,NORC GSS single-year Stata release value labels
+indus10,9390,other general government and support,valid,true,NORC GSS single-year Stata release value labels
+indus10,9470,"justice, public order, and safety activities",valid,true,NORC GSS single-year Stata release value labels
+indus10,9480,administration of human resource programs,valid,true,NORC GSS single-year Stata release value labels
+indus10,9490,administration of environmental quality and housing programs,valid,true,NORC GSS single-year Stata release value labels
+indus10,9570,administration of economic programs and space research,valid,true,NORC GSS single-year Stata release value labels
+indus10,9590,national security and international affairs,valid,true,NORC GSS single-year Stata release value labels
+indus10,9670,u.s. army,valid,true,NORC GSS single-year Stata release value labels
+indus10,9680,u.s. air force,valid,true,NORC GSS single-year Stata release value labels
+indus10,9690,u.s. navy,valid,true,NORC GSS single-year Stata release value labels
+indus10,9770,u.s. marine corps,valid,true,NORC GSS single-year Stata release value labels
+indus10,9780,u.s. coast guard,valid,true,NORC GSS single-year Stata release value labels
+indus10,9790,u.s. armed forces/n.s.,valid,true,NORC GSS single-year Stata release value labels
+indus10,9870,"active duty military personnel, all other",valid,true,NORC GSS single-year Stata release value labels
+indus10,9890,uncodeable,valid,true,NORC GSS single-year Stata release value labels
+indus10,9997,uncodeable,valid,true,NORC GSS single-year Stata release value labels
+indus10,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+indus10,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+satjob,1,very satisfied,valid,true,NORC GSS single-year Stata release value labels
+satjob,2,moderately satisfied,valid,true,NORC GSS single-year Stata release value labels
+satjob,3,a little dissatisfied,valid,true,NORC GSS single-year Stata release value labels
+satjob,4,very dissatisfied,valid,true,NORC GSS single-year Stata release value labels
+satjob,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+satjob,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+satjob,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+postlife,1,yes,valid,true,NORC GSS single-year Stata release value labels
+postlife,2,no,valid,true,NORC GSS single-year Stata release value labels
+postlife,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+postlife,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+pray,1,several times a day,valid,true,NORC GSS single-year Stata release value labels
+pray,2,once a day,valid,true,NORC GSS single-year Stata release value labels
+pray,3,several times a week,valid,true,NORC GSS single-year Stata release value labels
+pray,4,once a week,valid,true,NORC GSS single-year Stata release value labels
+pray,5,less than once a week,valid,true,NORC GSS single-year Stata release value labels
+pray,6,never,valid,true,NORC GSS single-year Stata release value labels
+pray,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+pray,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+relig16,1,protestant,valid,true,NORC GSS single-year Stata release value labels
+relig16,2,catholic,valid,true,NORC GSS single-year Stata release value labels
+relig16,3,jewish,valid,true,NORC GSS single-year Stata release value labels
+relig16,4,none,valid,true,NORC GSS single-year Stata release value labels
+relig16,5,other,valid,true,NORC GSS single-year Stata release value labels
+relig16,6,buddhism,valid,true,NORC GSS single-year Stata release value labels
+relig16,7,hinduism,valid,true,NORC GSS single-year Stata release value labels
+relig16,8,other eastern religions,valid,true,NORC GSS single-year Stata release value labels
+relig16,9,muslim/islam,valid,true,NORC GSS single-year Stata release value labels
+relig16,10,orthodox-christian,valid,true,NORC GSS single-year Stata release value labels
+relig16,11,christian,valid,true,NORC GSS single-year Stata release value labels
+relig16,12,native american,valid,true,NORC GSS single-year Stata release value labels
+relig16,13,inter-nondenominational,valid,true,NORC GSS single-year Stata release value labels
+relig16,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+relig16,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+news,1,every day,valid,true,NORC GSS single-year Stata release value labels
+news,2,a few times a week,valid,true,NORC GSS single-year Stata release value labels
+news,3,once a week,valid,true,NORC GSS single-year Stata release value labels
+news,4,less than once a week,valid,true,NORC GSS single-year Stata release value labels
+news,5,never,valid,true,NORC GSS single-year Stata release value labels
+news,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+news,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+inttech,1,very interested,valid,true,NORC GSS single-year Stata release value labels
+inttech,2,moderately interested,valid,true,NORC GSS single-year Stata release value labels
+inttech,3,not at all interested,valid,true,NORC GSS single-year Stata release value labels
+inttech,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+inttech,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+inttech,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+relig,1,protestant,valid,true,NORC GSS single-year Stata release value labels
+relig,2,catholic,valid,true,NORC GSS single-year Stata release value labels
+relig,3,jewish,valid,true,NORC GSS single-year Stata release value labels
+relig,4,none,valid,true,NORC GSS single-year Stata release value labels
+relig,5,other,valid,true,NORC GSS single-year Stata release value labels
+relig,6,buddhism,valid,true,NORC GSS single-year Stata release value labels
+relig,7,hinduism,valid,true,NORC GSS single-year Stata release value labels
+relig,8,other eastern religions,valid,true,NORC GSS single-year Stata release value labels
+relig,9,muslim/islam,valid,true,NORC GSS single-year Stata release value labels
+relig,10,orthodox-christian,valid,true,NORC GSS single-year Stata release value labels
+relig,11,christian,valid,true,NORC GSS single-year Stata release value labels
+relig,12,native american,valid,true,NORC GSS single-year Stata release value labels
+relig,13,inter-nondenominational,valid,true,NORC GSS single-year Stata release value labels
+relig,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+relig,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+attend,0,never,valid,true,NORC GSS single-year Stata release value labels
+attend,1,less than once a year,valid,true,NORC GSS single-year Stata release value labels
+attend,2,about once or twice a year,valid,true,NORC GSS single-year Stata release value labels
+attend,3,several times a year,valid,true,NORC GSS single-year Stata release value labels
+attend,4,about once a month,valid,true,NORC GSS single-year Stata release value labels
+attend,5,2-3 times a month,valid,true,NORC GSS single-year Stata release value labels
+attend,6,nearly every week,valid,true,NORC GSS single-year Stata release value labels
+attend,7,every week,valid,true,NORC GSS single-year Stata release value labels
+attend,8,several times a week,valid,true,NORC GSS single-year Stata release value labels
+attend,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+reliten,1,strong,valid,true,NORC GSS single-year Stata release value labels
+reliten,2,not very strong,valid,true,NORC GSS single-year Stata release value labels
+reliten,3,somewhat strong (vol.),valid,true,NORC GSS single-year Stata release value labels
+reliten,4,no religion,valid,true,NORC GSS single-year Stata release value labels
+reliten,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+reliten,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+reliten,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+sex,1,male,valid,true,NORC GSS single-year Stata release value labels
+sex,2,female,valid,true,NORC GSS single-year Stata release value labels
+region,1,northeast,valid,true,NORC GSS single-year Stata release value labels
+region,2,midwest,valid,true,NORC GSS single-year Stata release value labels
+region,3,south,valid,true,NORC GSS single-year Stata release value labels
+region,4,west,valid,true,NORC GSS single-year Stata release value labels
+educ,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+educ,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+tvhours,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+tvhours,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+tvhours,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+wwwhr,.d,Don't know,dont_know,false,GSS tagged missing values (NORC Stata releases)
+wwwhr,.i,Inapplicable (question not asked of this respondent),not_applicable,false,GSS tagged missing values (NORC Stata releases)
+wwwhr,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)
+age,.n,No answer,no_answer,false,GSS tagged missing values (NORC Stata releases)

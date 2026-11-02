@@ -1,0 +1,2 @@
+respondents_in_extract_1,respondents_in_extract_2,respondents_in_both,distinct_respondents_overall,overlap_pct_of_extract_1,overlap_pct_of_extract_2,raw_rows_loaded,duplicate_rows_collapsed_downstream,mart_rows,mart_distinct_keys
+5405,5215,2867,7753,53.0,55.0,10620,2867,7753,7753

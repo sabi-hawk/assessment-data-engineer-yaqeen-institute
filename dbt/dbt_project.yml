@@ -1,0 +1,86 @@
+# GSS respondent pipeline - dbt project.
+# Layers: sources (raw, python-owned) -> staging -> intermediate -> marts.
+# Naming conventions are documented in /docs/naming_conventions.md.
+name: gss_pipeline
+version: "1.0.0"
+profile: gss
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+
+target-path: target
+clean-targets: ["target", "dbt_packages"]
+
+require-dbt-version: [">=1.8.0", "<2.0.0"]
+
+vars:
+  # Survey years covered by the committed cuts.
+  survey_years: [2014, 2016, 2018]
+  # Extract provenance flags generated in staging follow this order
+  # (in_extract_1, in_extract_2).
+  extract_names:
+    - gss_extract_1_2014_2016
+    - gss_extract_2_2016_2018
+  # The modelled survey variables. Adding a new GSS variable to the pipeline =
+  # add it to the extracts, append it to one of these lists, and add its rows
+  # to the metadata seeds. No model needs rewriting.
+  gss_categorical_variables:
+    - wrkstat
+    - evwork
+    - degree
+    - indus10
+    - satjob
+    - postlife
+    - pray
+    - relig16
+    - news
+    - inttech
+    - relig
+    - attend
+    - reliten
+    - sex
+    - region
+  gss_numeric_variables:
+    - educ
+    - tvhours
+    - wwwhr
+    - age
+
+models:
+  gss_pipeline:
+    staging:
+      # cheap projections/deduplication read a handful of times per run
+      +materialized: view
+      +schema: staging
+    intermediate:
+      # long/classified forms are only read by the mart build
+      +materialized: view
+      +schema: intermediate
+    marts:
+      # the analyst-facing table is queried repeatedly -> materialize once
+      +materialized: table
+      +schema: marts
+
+seeds:
+  gss_pipeline:
+    +schema: metadata
+    variable_metadata:
+      +column_types:
+        variable_name: varchar
+        years_available: varchar
+        valid_min: double
+        valid_max: double
+    response_code_metadata:
+      +column_types:
+        variable_name: varchar
+        code: varchar
+        is_genuine_response: boolean
+    variable_ballot_availability:
+      +column_types:
+        variable_name: varchar
+        year: integer
+        ballot: integer
+        asked_on_ballot: boolean

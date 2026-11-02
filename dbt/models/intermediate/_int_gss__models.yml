@@ -1,0 +1,50 @@
+version: 2
+
+models:
+  - name: int_gss__responses_long
+    description: >
+      Survey responses unpivoted to long form.
+      Grain: one row per (respondent_key, variable_name). raw_code is the
+      untouched source value: a coded answer, a '.d'/'.i'/'.n' missing tag,
+      or null.
+    columns:
+      - name: respondent_key
+        data_tests: [not_null]
+      - name: variable_name
+        description: GSS variable mnemonic (lower case), e.g. 'pray'.
+        data_tests: [not_null]
+
+  - name: int_gss__responses_classified
+    description: >
+      Long-form responses joined to the metadata seeds and classified into one
+      response_class per observation. This is the only place response codes are
+      interpreted; staging keeps originals and the mart pivots this model.
+      Grain: one row per (respondent_key, variable_name).
+    columns:
+      - name: response_class
+        description: >
+          One of: valid, dont_know, no_answer, not_applicable,
+          not_asked_ballot, not_asked_in_year, system_missing, skipped_on_web,
+          refused, other_missing. 'unknown_code' / 'unknown_variable' mark
+          metadata gaps and are tested to be absent.
+        data_tests:
+          - not_null
+          - accepted_values:
+              values:
+                - valid
+                - dont_know
+                - no_answer
+                - not_applicable
+                - not_asked_ballot
+                - not_asked_in_year
+                - system_missing
+                - skipped_on_web
+                - refused
+                - other_missing
+      - name: response_label
+        description: >
+          Human-readable answer (NORC codebook label, or the value itself for
+          numeric variables). Null whenever the response is not a genuine
+          answer - use response_class for missing states.
+      - name: is_genuine_response
+        description: True only for response_class = 'valid'.

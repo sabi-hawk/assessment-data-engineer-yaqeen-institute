@@ -1,0 +1,8 @@
+# Python 3.11+ (developed and verified on 3.12)
+duckdb==2.0.0
+dbt-core==1.12.6
+dbt-duckdb==1.11.1
+pytest==9.2.0
+# Only needed to rebuild the committed extracts from NORC source files
+# (scripts/build_extracts.py and scripts/generate_seed_metadata.py):
+pyreadstat==1.3.7
