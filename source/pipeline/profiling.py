@@ -183,13 +183,20 @@ def _render_markdown(profile: dict, extracts: list[ExtractFile]) -> str:
         "respondents who **were** asked. `system_missing` would be a null in the "
         "source file (none occur in these cuts).")
     add("")
-    add("| variable | year | n | valid | iap | don't know | no answer | other | pct valid |")
-    add("|---|---|---|---|---|---|---|---|---|")
+    add("| variable | year | n | valid | iap | don't know | no answer | other | pct valid | pct missing |")
+    add("|---|---|---|---|---|---|---|---|---|---|")
     for row in profile["missingness"]:
         pct = 100 * row["valid"] / row["n"] if row["n"] else 0
         add(f"| {row['variable']} | {row['year']} | {row['n']:,} | {row['valid']:,} | "
             f"{row['iap']:,} | {row['dont_know']:,} | {row['no_answer']:,} | "
-            f"{row['other_tag'] + row['system_missing']:,} | {pct:.1f}% |")
+            f"{row['other_tag'] + row['system_missing']:,} | {pct:.1f}% | {100 - pct:.1f}% |")
+    add("")
+    add("**Availability across years:** every profiled variable is fielded in all "
+        "three extract years (2014, 2016, 2018) - no variable is year-restricted "
+        "within these cuts. The year choice was made for exactly this reason; in "
+        "other GSS years this does not hold (e.g. POSTLIFE and RELITEN are absent "
+        "in 2021), and the pipeline's `not_asked_in_year` classification covers "
+        "that case.")
     add("")
     add("## 4. Ballot rotation (inferred from the data)")
     add("")
@@ -211,6 +218,16 @@ def _render_markdown(profile: dict, extracts: list[ExtractFile]) -> str:
         "applies only to a subset (e.g. EVWORK is asked only of respondents not "
         "currently working; WWWHR only of internet users). The dbt layer separates "
         "these states: `not_asked_ballot` vs `not_applicable`.")
+    add("")
+    add("**What this means for the questions the pipeline can honestly answer:** "
+        "questions built on NEWS or TVHOURS (Q4 TV vs job satisfaction, Q6 "
+        "newspaper/TV trends) can only describe the ~2/3 of each wave on ballots 1-2; "
+        "INTTECH has the thinnest coverage (~47-53% asked) so technology-interest "
+        "estimates carry the widest uncertainty; EVWORK-based results (Q5) exclude "
+        "the unemployed by questionnaire design; everything else (PRAY, RELIG16, "
+        "POSTLIFE, WRKSTAT, DEGREE, demographics) covers effectively the full "
+        "sample. Every analysis states its denominator and reports not-asked "
+        "counts alongside results rather than hiding them.")
     add("")
     add("## 5. Source files")
     add("")

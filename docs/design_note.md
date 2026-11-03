@@ -95,6 +95,17 @@ tests → dbt run → dbt test → analyses → dbt docs. A failed stage aborts 
 rest; failing data tests block the analyses. Airflow/Dagster would be
 disproportionate for two files and one target.
 
+- **Triggers**: runs are manual (a reviewer invoking the CLI) and automatic in
+  CI on every push. Adding a new extract = commit the file, register it in
+  `config.EXTRACT_FILES`, run `all`: only the new file is loaded (existing ones
+  sha-skip) and dbt rebuilds downstream.
+- **Failure detection**: a failed run exits non-zero (fails CI), logs the
+  failing stage with its error, writes `status: failed` into the JSON run
+  summary, and records a `failed` row in `raw.load_audit` for load errors.
+- **Safe re-run**: just re-invoke `all`. Loads are transactional per extract
+  (a crashed load leaves the previous state intact) and unchanged inputs are
+  skipped, so retries converge on the same final state.
+
 ## 11. Logging and observability
 
 Every run gets a run id, a log file under `/logs`, a JSON run summary (stage

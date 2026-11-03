@@ -1,6 +1,6 @@
-{
-  "run_id": "ff9d9c00b6",
-  "finished_at": "2026-11-02T16:46:27+00:00",
+﻿{
+  "run_id": "5d9ade1d9c",
+  "finished_at": "2026-11-03T08:58:04+00:00",
   "status": "success",
   "force": false,
   "extracts": {
@@ -20,21 +20,21 @@
   "loads": [
     {
       "extract_name": "gss_extract_1_2014_2016",
-      "status": "loaded",
+      "status": "skipped_unchanged",
       "records_in_file": 5405,
       "records_valid": 5405,
       "records_quarantined": 0,
-      "records_inserted": 5405,
+      "records_inserted": 0,
       "records_replaced": 0,
-      "overlap_rows_with_other_extracts": 0
+      "overlap_rows_with_other_extracts": 2867
     },
     {
       "extract_name": "gss_extract_2_2016_2018",
-      "status": "loaded",
+      "status": "skipped_unchanged",
       "records_in_file": 5215,
       "records_valid": 5215,
       "records_quarantined": 0,
-      "records_inserted": 5215,
+      "records_inserted": 0,
       "records_replaced": 0,
       "overlap_rows_with_other_extracts": 2867
     }
@@ -61,49 +61,49 @@
     {
       "stage": "init-db",
       "status": "ok",
-      "duration_s": 0.05,
+      "duration_s": 0.04,
       "detail": "schema ready at C:\\Users\\BD-Laptop\\Desktop\\assessments\\data-engineer-yaqeen-institute\\source\\data\\processed\\gss.duckdb"
     },
     {
       "stage": "ingest",
       "status": "ok",
-      "duration_s": 17.91,
-      "detail": "gss_extract_1_2014_2016: loaded (5405 inserted); gss_extract_2_2016_2018: loaded (5215 inserted)"
+      "duration_s": 0.04,
+      "detail": "gss_extract_1_2014_2016: skipped_unchanged (0 inserted); gss_extract_2_2016_2018: skipped_unchanged (0 inserted)"
     },
     {
       "stage": "dbt-seed",
       "status": "ok",
-      "duration_s": 6.36,
+      "duration_s": 5.1,
       "detail": "dbt seed succeeded"
     },
     {
       "stage": "dbt-source-test",
       "status": "ok",
-      "duration_s": 6.04,
+      "duration_s": 4.98,
       "detail": "dbt test --select source:* succeeded"
     },
     {
       "stage": "dbt-run",
       "status": "ok",
-      "duration_s": 6.08,
+      "duration_s": 6.64,
       "detail": "dbt run succeeded"
     },
     {
       "stage": "dbt-test",
       "status": "ok",
-      "duration_s": 5.54,
+      "duration_s": 5.42,
       "detail": "dbt test succeeded"
     },
     {
       "stage": "analyses",
       "status": "ok",
-      "duration_s": 4.92,
+      "duration_s": 4.83,
       "detail": "7 analytical queries executed; results in C:\\Users\\BD-Laptop\\Desktop\\assessments\\data-engineer-yaqeen-institute\\report\\evidence\\analysis_results"
     },
     {
       "stage": "dbt-docs",
       "status": "ok",
-      "duration_s": 4.75,
+      "duration_s": 5.03,
       "detail": "dbt docs generate succeeded"
     }
   ]
