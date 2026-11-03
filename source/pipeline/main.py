@@ -161,7 +161,9 @@ class PipelineRunner:
                 rows = cursor.fetchall()
                 csv_path = out_dir / f"{sql_path.stem}.csv"
                 with open(csv_path, "w", newline="", encoding="utf-8") as fh:
-                    writer = csv.writer(fh)
+                    # LF keeps committed evidence byte-stable across OSes
+                    # (csv defaults to CRLF; .gitattributes normalises to LF)
+                    writer = csv.writer(fh, lineterminator="\n")
                     writer.writerow(columns)
                     writer.writerows(rows)
                 logger.info("analysis %s: %d rows -> %s", sql_path.stem, len(rows), csv_path.name)

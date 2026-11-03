@@ -166,7 +166,7 @@ def main() -> int:
     tags, ranges, ballot = observed_stats()
 
     with open(SEED_DIR / "response_code_metadata.csv", "w", newline="", encoding="utf-8") as fh:
-        writer = csv.writer(fh)
+        writer = csv.writer(fh, lineterminator="\n")
         writer.writerow(
             ["variable_name", "code", "label", "response_class", "is_genuine_response", "metadata_source"]
         )
@@ -192,7 +192,7 @@ def main() -> int:
                 )
 
     with open(SEED_DIR / "variable_metadata.csv", "w", newline="", encoding="utf-8") as fh:
-        writer = csv.writer(fh)
+        writer = csv.writer(fh, lineterminator="\n")
         writer.writerow(
             ["variable_name", "business_question", "description", "value_type",
              "years_available", "valid_min", "valid_max", "universe", "limitations"]
@@ -209,7 +209,7 @@ def main() -> int:
             )
 
     with open(SEED_DIR / "variable_ballot_availability.csv", "w", newline="", encoding="utf-8") as fh:
-        writer = csv.writer(fh)
+        writer = csv.writer(fh, lineterminator="\n")
         writer.writerow(["variable_name", "year", "ballot", "asked_on_ballot"])
         for (var, year, b), (total, iap) in sorted(ballot.items()):
             asked = (iap / total) < 0.995 if total else True

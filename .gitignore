@@ -28,3 +28,6 @@ logs/*
 # OS / editor noise
 .DS_Store
 Thumbs.db
+
+# dbt per-user telemetry id (machine-specific, regenerated automatically)
+dbt/.user.yml

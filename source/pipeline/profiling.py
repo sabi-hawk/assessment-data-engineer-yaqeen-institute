@@ -132,7 +132,10 @@ def write_profile(
 
     csv_path = evidence_dir / "data_profile_missingness.csv"
     with open(csv_path, "w", newline="", encoding="utf-8") as fh:
-        writer = csv.DictWriter(fh, fieldnames=list(profile["missingness"][0]))
+        # LF keeps committed evidence byte-stable across OSes (csv defaults to CRLF)
+        writer = csv.DictWriter(
+            fh, fieldnames=list(profile["missingness"][0]), lineterminator="\n"
+        )
         writer.writeheader()
         writer.writerows(profile["missingness"])
 

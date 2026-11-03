@@ -85,6 +85,7 @@ git clone <this-repository>
 cd data-engineer-yaqeen-institute
 python -m venv .venv
 .venv\Scripts\Activate.ps1      # Windows PowerShell (cmd.exe: .venv\Scripts\activate.bat)
+source .venv/bin/activate       # macOS / Linux
 python -m pip install -r source/requirements.txt
 ```
 
