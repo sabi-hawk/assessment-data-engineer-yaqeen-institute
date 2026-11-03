@@ -88,6 +88,12 @@ python -m venv .venv
 pip install -r source/requirements.txt
 ```
 
+`source/requirements.txt` pins the direct dependencies;
+`source/requirements.lock.txt` is a full transitive freeze captured from a
+clean-environment verification run — install from it instead
+(`pip install -r source/requirements.lock.txt`) for bit-for-bit
+reproducibility months from now.
+
 ## Configuration
 
 Everything works with defaults. To override, copy `.env.example` to `.env`
@@ -169,6 +175,7 @@ python scripts/capture_query_plans.py   # writes report/evidence/query_plans/
 | symptom | cause / fix |
 |---|---|
 | `dbt executable not found` | activate the venv; reinstall requirements |
+| `pip install` fails with `No such file or directory: ...numpy\f2py\...` (Windows) | path too long for the venv location — enable Windows long-path support or create the venv at a shorter path (e.g. `C:\venvs\gss`) |
 | `database ... is locked` | close other DuckDB connections (e.g. an open `dbt docs serve` or IDE session) |
 | `Catalog Error: Table ... does not exist` in dbt | run ingestion first: `python -m pipeline.main init-db ingest` |
 | records quarantined on validate | inspect `source/data/processed/quarantine_*.json`; the pipeline refuses to load malformed extracts by design |
