@@ -84,14 +84,14 @@ logs/                      run logs + JSON run summaries (git-ignored)
 git clone <this-repository>
 cd data-engineer-yaqeen-institute
 python -m venv .venv
-.venv\Scripts\activate          # Windows    (Linux/macOS: source .venv/bin/activate)
-pip install -r source/requirements.txt
+.venv\Scripts\Activate.ps1      # Windows PowerShell (cmd.exe: .venv\Scripts\activate.bat)
+python -m pip install -r source/requirements.txt
 ```
 
 `source/requirements.txt` pins the direct dependencies;
 `source/requirements.lock.txt` is a full transitive freeze captured from a
 clean-environment verification run — install from it instead
-(`pip install -r source/requirements.lock.txt`) for bit-for-bit
+(`python -m pip install -r source/requirements.lock.txt`) for bit-for-bit
 reproducibility months from now.
 
 ## Configuration
@@ -136,6 +136,8 @@ final dataset (proven by tests).
 
 ## Running dbt directly
 
+Requires the venv activated, so that `dbt` is on PATH.
+
 ```bash
 # from the repository root (the profile's default DB path is root-relative)
 dbt build --project-dir dbt --profiles-dir dbt     # seeds + models + tests
@@ -174,8 +176,9 @@ python scripts/capture_query_plans.py   # writes report/evidence/query_plans/
 
 | symptom | cause / fix |
 |---|---|
-| `dbt executable not found` | activate the venv; reinstall requirements |
-| `pip install` fails with `No such file or directory: ...numpy\f2py\...` (Windows) | path too long for the venv location — enable Windows long-path support or create the venv at a shorter path (e.g. `C:\venvs\gss`) |
+| `dbt executable not found on PATH` | activate the venv first — the orchestrator resolves `dbt` via `shutil.which`, so invoking the interpreter by full path (e.g. `.venv\Scripts\python.exe -m pipeline.main`) leaves `.venv\Scripts` off PATH and this stage fails |
+| `python -m pip install` fails with `No such file or directory: ...numpy\f2py\...` (Windows) | path too long for the venv location — enable Windows long-path support or create the venv at a shorter path (e.g. `C:\venvs\gss`) |
+| `pip.exe`/`pytest.exe` fail with *"An Application Control policy has blocked this file"* (Windows) | Smart App Control / WDAC rejects the unsigned console-script stubs that pip generates in the venv's `Scripts` directory. `python.exe` itself is signed, so call the module instead: `python -m pip`, `python -m pytest`. Do not disable Smart App Control to work around this — it cannot be re-enabled without a Windows reset |
 | `database ... is locked` | close other DuckDB connections (e.g. an open `dbt docs serve` or IDE session) |
 | `Catalog Error: Table ... does not exist` in dbt | run ingestion first: `python -m pipeline.main init-db ingest` |
 | records quarantined on validate | inspect `source/data/processed/quarantine_*.json`; the pipeline refuses to load malformed extracts by design |
